@@ -60,7 +60,7 @@ optional arguments:
 ```
 For example, to train CycleGAN model for voice Conversion between ``SF1`` and ``TM1``:
 ```bash
-$ python prepocess_training.py --train_A_dir ../data/vcc2016_training/SF1
+$ python preprocess_training.py --train_A_dir ../data/vcc2016_training/SF1
                                 --train_B_dir ../data/vcc2016_training/TM1
                                 --cache_folder ../cache/
 ```                                
@@ -109,7 +109,7 @@ usage: train.py [-h] [--logf0s_normalization LOGF0S_NORMALIZATION]
 For example, to train CycleGAN model for voice conversion between ``SF1`` and ``TF2``:
 
 ```bash
-$python train.py --logf0s_normalization ../cache/logf0s_normalization.npz --mcep_normalization ../cache/mcep_normalization.npz --coded_sps_A_norm coded_sps_A_norm --coded_sps_B_norm coded_sps_B_norm --resume_training_at ../cache/model_checkpoint/_CycleGAN_CheckPoint --validation_A_dir ../data/vcc2016_training/evaluation_all/SF1/ --output_A_dir ../data/vcc2016_training/converted_sound/SF1 --validation_B_dir ../data/vcc2016_training/evaluation_all/TF2/ --output_B_dir ../data/vcc2016_training/converted_sound/TF2/
+$python train.py --logf0s_normalization ../cache/logf0s_normalization.npz --mcep_normalization ../cache/mcep_normalization.npz --coded_sps_A_norm coded_sps_A_norm.pickle --coded_sps_B_norm coded_sps_B_norm.pickle --resume_training_at ../cache/model_checkpoint/_CycleGAN_CheckPoint --validation_A_dir ../data/vcc2016_training/evaluation_all/SF1/ --output_A_dir ../data/vcc2016_training/converted_sound/SF1 --validation_B_dir ../data/vcc2016_training/evaluation_all/TF2/ --output_B_dir ../data/vcc2016_training/converted_sound/TF2/
 ```                                                
 ## Reference
 
